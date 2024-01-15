@@ -22,9 +22,9 @@
 
 
 
-        {"type": "SetVec2", "name": "pos", "value": "basePos - vec2(0, 0.5) + hoverOffset * 0.5"},
+        {"type": "SetVec2", "name": "pos", "value": "basePos - vec2(0, 0.5) + _hoverOffset * 0.5"},
 
-        {"type": "DrawUnit", "pos": "pos - shadowOffset", "scl": "getScl(0.165)", "color": "shadowColor"},
+        {"type": "DrawUnit", "pos": "pos - shadowOffset", "scl": "_getScl(0.165)", "color": "shadowColor"},
 
         {"type": "DrawBloom", "body": [
             {"type": "DrawSquares", "col": "colorAccent", "time": "time", "amount": 80, "seed": 2}
