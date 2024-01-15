@@ -12,7 +12,7 @@
         {"type": "DrawVertGradient", "col1": "colorAccent"},
 
         {"type": "DrawFillPoly", "pos": "basePos", "sides": 3, "radius": 3.5, "color": "colorAccent", "rotation": "rad(-90)"},
-        {"type": "DrawPoly", "pos": "basePos", "sides": 3, "radius": 5.5, "color": "colorAccent", "rotation": "rad(-90)"},
+        {"type": "DrawPoly", "pos": "basePos", "sides": 3, "radius": 5.5, "stroke": 1.0, "color": "colorAccent", "rotation": "rad(-90)"},
         
         {"type": "DrawVertGradient", "col1": "#c076595a", "col2": "#c0765900"},
         
