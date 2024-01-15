@@ -24,11 +24,11 @@
 
         {"type": "SetVec2", "name": "pos", "value": "basePos - vec2(0, 0.5) + _hoverOffset * 0.5"},
 
-        {"type": "DrawUnit", "pos": "pos - shadowOffset", "scl": "_getScl(0.165)", "color": "shadowColor"},
+        {"type": "DrawUnit", "pos": "pos - shadowOffset", "scl": "getScl(0.165)", "color": "shadowColor"},
 
         {"type": "DrawBloom", "body": [
             {"type": "DrawSquares", "col": "colorAccent", "time": "time", "amount": 80, "seed": 2}
         ]},
-        {"type": "DrawUnit", "pos": "pos", "scl": "_getScl(0.165)"}
+        {"type": "DrawUnit", "pos": "pos", "scl": "getScl(0.165)"}
     ]
 }
