@@ -11,8 +11,8 @@
 
         {"type": "DrawVertGradient", "col1": "colorAccent"},
 
-        {"type": "DrawFillPoly", "pos": "basePos", "sides": 3, "radius": 3.5, "color": "colorAccent", "rotation": "rad(-90)"},
-        {"type": "DrawPoly", "pos": "basePos", "sides": 3, "radius": 5.5, "stroke": 1.0, "color": "colorAccent", "rotation": "rad(-90)"},
+        {"type": "DrawFillPoly", "pos": "basePos", "sides": 5, "radius": 3.5, "color": "colorAccent", "rotation": "rad(-90)"},
+        {"type": "DrawPoly", "pos": "basePos", "sides": 5, "radius": 5.5, "stroke": 1.0, "color": "colorAccent", "rotation": "rad(-90)"},
         
         {"type": "DrawVertGradient", "col1": "#c076595a", "col2": "#c0765900"},
         
@@ -27,7 +27,7 @@
         {"type": "DrawUnit", "pos": "pos - shadowOffset", "scl": "getScl(0.165)", "color": "shadowColor"},
 
         {"type": "DrawBloom", "body": [
-            {"type": "DrawSquares", "col": "colorAccent", "time": "state_time", "amount": 80, "seed": 2}
+            {"type": "DrawSquares", "col": "colorAccent", "time": "fau_time", "amount": 80, "seed": 2}
         ]},
         {"type": "DrawUnit", "pos": "pos", "scl": "getScl(0.165)"}
     ]
