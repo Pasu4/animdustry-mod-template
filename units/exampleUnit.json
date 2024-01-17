@@ -7,7 +7,7 @@
     "unmoving": false,
     "draw": [
         {"type": "SetColor", "name": "light", "value": "#b25840"},
-        {"type": "DrawStripes", "col1": "#ff69b4", "col2": "#ff8cc6"},
+        {"type": "DrawStripes", "col1": "#b25840", "col2": "#c07659"},
 
         {"type": "DrawVertGradient", "col1": "colorAccent"},
 
@@ -16,7 +16,7 @@
         
         {"type": "DrawVertGradient", "col1": "#c076595a", "col2": "#c0765900"},
         
-        {"type": "DrawLines", "col": "#ffffff", "seed": 4},
+        {"type": "DrawLines", "col": "colorAccent", "seed": 4},
         
         {"type": "DrawVertGradient", "col1": "#b2584066", "col2": "#b2584000"},
 
