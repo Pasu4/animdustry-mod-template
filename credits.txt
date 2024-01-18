@@ -1,0 +1,3 @@
+- Animdustry Mod Template -
+
+Made by Pasu4 as an example / template for a mod.
