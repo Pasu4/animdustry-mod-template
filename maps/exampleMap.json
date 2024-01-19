@@ -1,0 +1,18 @@
+{
+    "songname": "Anuke - Boss 1",
+    "music": "boss1",
+    "bpm": 100.0,
+    "beatOffset": 0.0,
+    "maxHits": 10,
+    "copperAmount": 8,
+    "fadeColor": "fa874c",
+    "drawPixel": [
+
+    ],
+    "draw": [
+
+    ],
+    "update": [
+        
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "name": "Example",
+    "parameters": [
+        {"name": "col1", "type": "Color", "default": "colorWhite"},
+        {"name": "col2", "type": "Color", "default": "colorWhite"},
+        {"name": "time", "type": "float", "default": "state_time"}
+    ],
+    "script": [
+        {"type": "SetFloat", "name": "iter", "value": "0.0"},
+        {"type": "Background", "col": "abcdef"},
+        {"type": "DrawBloom", "body": [
+            {"type": "Repeat", "condition": "iter < 10", "body": [
+                {"type": "DrawTriSquare", "pos": "vec2(iter - 5, 0) * 2", "col": "ff7f7f", "len": 0.6, "rad": 0.2, "amount": "iter + 3", "offset": "rad(fau_time * 45 + iter * 15)", "shapeOffset": "rad(180)"},
+                {"type": "Condition", "condition":"iter == 4", "then": [
+                    {"type": "Break"}
+                ]},
+                {"type": "SetFloat", "name": "iter", "value": "iter + 1"}
+            ]}
+        ]},
+        {"type": "Iterate", "iterator": "iter", "startValue": -5, "endValue": 5, "body": [
+            {"type": "DrawRoundLine", "pos": "vec2(iter, 0) * 2", "angle": "rad(fau_time * 45 + iter + 5 * 15)", "len": "-iter * 0.1 + 0.1", "color": "colorPink", "stroke": 0.1},
+            {"type": "Condition", "condition":"iter == 0", "then": [
+                {"type": "Return"}
+            ]}
+        ]},
+        {"type": "DrawVertGradient", "col1": "00ff00", "col2": "0000ff00"}
+    ]
+}
