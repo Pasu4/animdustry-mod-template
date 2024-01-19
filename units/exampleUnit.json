@@ -20,7 +20,7 @@
         
         {"type": "DrawVertGradient", "col1": "#b2584066", "col2": "#b2584000"},
 
-        {"type": "Example", "col1": "colorAccent", "col2": "colorHeal", "time": "fau_time"},
+        {"type": "Example", "col1": "colorHeal", "col2": "colorAccent", "time": "fau_time * 5"},
 
         {"type": "SetVec2", "name": "pos", "value": "basePos - vec2(0, 0.5) + _hoverOffset * 0.5"},
 
