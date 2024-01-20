@@ -30,5 +30,13 @@
             {"type": "DrawSquares", "col": "colorAccent", "time": "fau_time", "amount": 80, "seed": 2}
         ]},
         {"type": "DrawUnit", "pos": "pos", "scl": "getScl(0.165)"}
+    ],
+    "abilityProc": [
+        {"type": "Condition", "condition": "moves % 4 == 0", "then": [
+            {"type": "Formation", "name": "d8", "iterator": "v", "body": [
+                {"type": "EffectExplode", "pos": "v * 2"},
+                {"type": "DamageBlocks", "target": "v * 2"}
+            ]}
+        ]}
     ]
 }
