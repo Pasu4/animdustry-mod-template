@@ -34,8 +34,8 @@
     "abilityProc": [
         {"type": "Condition", "condition": "moves % 4 == 0", "then": [
             {"type": "Formation", "name": "d8", "iterator": "v", "body": [
-                {"type": "EffectExplode", "pos": "gridPos + v * 2"},
-                {"type": "DamageBlocks", "target": "gridPos + v * 2"}
+                {"type": "EffectExplode", "pos": "gridPosition + v * 2"},
+                {"type": "DamageBlocks", "target": "gridPosition + v * 2"}
             ]}
         ]}
     ]
