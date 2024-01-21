@@ -1,5 +1,5 @@
 {
-    "songname": "Anuke - Boss 1",
+    "songName": "Anuke - Boss 1",
     "music": "boss1",
     "bpm": 100.0,
     "beatOffset": 0.0,
@@ -13,6 +13,6 @@
 
     ],
     "update": [
-        
+
     ]
 }
