@@ -7,12 +7,26 @@
     "copperAmount": 8,
     "fadeColor": "fa874c",
     "drawPixel": [
-
+        {"type": "DrawStripes", "col1": "#7c4b80", "col2": "#6b4474"},
+        {"type": "DrawBeatSquare", "col": "#f25555"},
+        {"type": "DrawFlame", "col1": "#7457ce", "col2": "#7457ce", "time": "state_time"}
     ],
     "draw": [
-
+        {"type": "DrawTiles"}
     ],
     "update": [
-
+        {"type": "Condition", "condition": "state_newTurn", "then": [
+            {"type": "Turns", "fromTurn": 7, "toTurn": 19, "interval": 4, "body": [
+                {"type": "Condition", "condition": "(state_turn + 1) % 8 == 0", "then": [
+                    {"type": "Formation", "name": "d4edge", "iterator": "v", "body": [
+                        {"type": "MakeDelayBulletWarn", "pos": "playerPos + v * 2", "dir": "-v"}
+                    ]}
+                ], "else": [
+                    {"type": "Formation", "name": "d4", "iterator": "v", "body": [
+                        {"type": "MakeDelayBulletWarn", "pos": "playerPos + v * 3", "dir": "-v"}
+                    ]}
+                ]}
+            ]}
+        ]}
     ]
 }
