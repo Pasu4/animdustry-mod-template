@@ -1,6 +1,6 @@
 {
     name: Template
-    namespace: template
+    namespace: exampleNamespace
     author: Pasu4
     description: Template for a mod for animdustry
 }

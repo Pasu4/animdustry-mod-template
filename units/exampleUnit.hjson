@@ -5,29 +5,4 @@
     abilityDesc: "dolor sit amet"
     abilityReload: 4
     unmoving: false
-    draw: [
-        {type: "SetColor", name: "light", value: "#b25840"}
-        {type: "DrawStripes", col1: "#b25840", col2: "#c07659"}
-        {type: "DrawVertGradient", col1: "colorAccent"}
-        {type: "DrawFillPoly", pos: "basePos", sides: 5, radius: 3.5, color: "colorAccent", rotation: "rad(-90)"}
-        {type: "DrawPoly", pos: "basePos", sides: 5, radius: 5.5, "stroke": 1.0, color: "colorAccent", rotation: "rad(-90)"}
-        {type: "DrawVertGradient", col1: "#c076595a", col2: "#c0765900"}
-        {type: "DrawLines", col: "colorAccent", seed: 4}
-        {type: "DrawVertGradient", col1: "#b2584066", col2: "#b2584000"}
-        {type: "Example", col1: "colorHeal", col2: "colorAccent", time: "fau_time * 5"}
-        {type: "SetVec2", name: "pos", value: "basePos - vec2(0, 0.5) + _hoverOffset * 0.5"}
-        {type: "DrawUnit", pos: "pos - shadowOffset", scl: "getScl(0.165)", color: "shadowColor"}
-        {type: "DrawBloom", body: [
-            {type: "DrawSquares", col: "colorAccent", time: "fau_time", amount: 80, seed: 2}
-        ]},
-        {type: "DrawUnit", pos: "pos", scl: "getScl(0.165)"}
-    ],
-    abilityProc: [
-        {type: "Condition", condition: "moves % 4 == 0", then: [
-            {type: "Formation", name: "d8", iterator: "v", body: [
-                {type: "EffectExplode", pos: "gridPosition + v * 2"},
-                {type: "DamageBlocks", target: "gridPosition + v * 2"}
-            ]}
-        ]}
-    ]
 }
