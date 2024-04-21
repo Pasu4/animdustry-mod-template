@@ -1,11 +1,15 @@
 exampleNamespace.exampleUnit_draw = function(basePos) {
+    function rad(deg) {
+        return deg / 180 * Math.PI;
+    }
+
     // Draw background
     light = Color.parse("#b25840");
     drawStripes(light, Color.parse("#c07659"));
     // log(Color.accent.r);
     drawVertGradient(Color.accent);
-    drawFillPoly(basePos, 5, 3.5, Math.rad(-90), Color.accent);
-    drawPoly(basePos, 5, 5.5, Math.rad(-90), 1.0, Color.accent);
+    drawFillPoly(basePos, 5, 3.5, rad(-90), Color.accent);
+    drawPoly(basePos, 5, 5.5, rad(-90), 1.0, Color.accent);
     drawVertGradient(Color.parse("#c076595a"), Color.parse("#c0765900"));
     // exampleFunction(Color.heal, Color.accent, fau_time * 5);
     pos = Vec2.add(Vec2.sub(basePos, new Vec2(0, 0.5)), Vec2.scale(hoverOffset(), 0.5));
@@ -15,7 +19,7 @@ exampleNamespace.exampleUnit_draw = function(basePos) {
 
     // Draw squares with bloom
     beginBloom();
-    drawSquares(Color.accent, fau.time, 80, 2);
+    drawSquares(Color.accent, state.globalTime, 80, 2);
     endBloom();
 
     // Draw unit
