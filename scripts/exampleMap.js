@@ -20,9 +20,11 @@ exampleNamespace.exampleMap_drawPixel = function() {
     // Draw spore storm
     drawFlame(Color.parse("#7457ce"), Color.parse("#7457ce"), state.time);
 
-    // Draw Crux symbol (not working because drawShape is currently bugged)
-    drawShape([new Vec2(0, 2.8), new Vec2(0.7, 2.1), new Vec2(0.7, 2.8), new Vec2(1.5, 2), new Vec2(1.5, 1.3), new Vec2(1.9, 0.9), new Vec2(0, -1), new Vec2(-0.3, -0.7), new Vec2(-0.3, 0), new Vec2(-1.1, 0.8), new Vec2(-1.1, 0.1), new Vec2(-1.9, 0.9)], true, px(1), Color.red);
-    drawShape([new Vec2(0, -2), new Vec2(2.4, 0.4), new Vec2(2.4, -0.4), new Vec2(0, -2.8), new Vec2(-1, -1.8), new Vec2(-1, -2.7), new Vec2(-1.8, -1.9), new Vec2(-1.8, -1), new Vec2(-2.4, -0.4), new Vec2(-2.4, 0.4)], true, px(1), Color.red);
+    // Draw Crux symbol
+    drawShape([new Vec2(0, 2.8), new Vec2(0.7, 2.1), new Vec2(0.7, 2.8), new Vec2(1.5, 2), new Vec2(1.5, 1.3), new Vec2(1.9, 0.9), new Vec2(0, -1), new Vec2(-0.3, -0.7), new Vec2(-0.3, 0), new Vec2(-1.1, 0.8), new Vec2(-1.1, 0.1), new Vec2(-1.9, 0.9)],
+        true, px(1), Color.red);
+    drawShape([new Vec2(0, -2), new Vec2(2.4, 0.4), new Vec2(2.4, -0.4), new Vec2(0, -2.8), new Vec2(-1, -1.8), new Vec2(-1, -2.7), new Vec2(-1.8, -1.9), new Vec2(-1.8, -1), new Vec2(-2.4, -0.4), new Vec2(-2.4, 0.4)],
+        true, px(1), Color.red);
 };
 
 exampleNamespace.exampleMap_draw = function() {
@@ -42,8 +44,11 @@ exampleNamespace.exampleMap_draw = function() {
 
 exampleNamespace.exampleMap_update = function() {
     if(state.newTurn && state.turn >= 4 && state.turn < 4 + mapSize * 2) {
-        effectWarn(new Vec2(state.turn - 4 - mapSize, 0), state.beatSpacing);
+        effectWarn(new Vec2(state.turn - 4 - mapSize, -mapSize), state.beatSpacing);
         
-        makeBulletCircle(new Vec2(state.turn - 4 - mapSize, 0));
+        makeDelay(1, function() {
+            // makeBulletCircle(new Vec2(state.turn - 4 - mapSize, 0));
+            makeBullet(new Vec2(state.turn - 4 - mapSize, -mapSize), new Vec2(0, 1));
+        });
     }
 };
