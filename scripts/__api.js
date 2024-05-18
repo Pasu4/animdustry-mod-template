@@ -1053,9 +1053,9 @@ function makeTimedBullet(pos, dir, tex = "bullet", life = 3) { }
  * Creates a conveyor on the playing field. Should only be used in map update scripts.
  * @param {Vec2} pos The position of the conveyor.
  * @param {Vec2} dir The distance the conveyor moves per turn.
- * @param {int} [length=2] The number of conveyor belts in a row. Only 1 and 2 work. (TODO Check if that is a bug)
- * @param {string} [tex="conveyor"] The texture of the conveyor.
- * @param {int} [gen=0]
+ * @param {int} [length=2] The number of conveyor belts in a row. Only 1 and 2 work.
+ * @param {string} [tex="conveyor"] The texture of the conveyor. Does not work with a length of 2.
+ * @param {int} [gen=0] Unknown.
  */
 function makeConveyor(pos, dir, length = 2, tex = "conveyor", gen = 0) { }
 
@@ -1192,5 +1192,13 @@ function changeBpm(bpm) { }
  * @param {string} message The message to log.
  */
 function log(message) { }
+
+/**
+ * Imports a sprite from another mod so that it can be used in the current mod.
+ * @param {string} name The name of the sprite in the source mod.
+ * @param {string} namespace The namepace of the mod the sprite is from.
+ * @param {string} [alias=name] The name the sprite will have in the current mod.
+ */
+function importSprite(name, namespace, alias = name) { }
 
 //#endregion

@@ -3,4 +3,9 @@
     namespace: exampleNamespace
     author: Pasu4
     description: Template for a mod for animdustry
+    
+    // Dependencies will be implemented with the mod browser
+    /* dependencies: [
+        exampleDependency
+    ]*/
 }

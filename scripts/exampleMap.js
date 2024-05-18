@@ -48,7 +48,8 @@ exampleNamespace.exampleMap_update = function() {
         
         makeDelay(1, function() {
             // makeBulletCircle(new Vec2(state.turn - 4 - mapSize, 0));
-            makeBullet(new Vec2(state.turn - 4 - mapSize, -mapSize), new Vec2(0, 1));
+            // makeWall(new Vec2(state.turn - 4 - mapSize, -mapSize), "test-alias", 16, 3);
+            makeWall(new Vec2(state.turn - 4 - mapSize, -mapSize), "test-bullet", 16, 3);
         });
     }
 };
