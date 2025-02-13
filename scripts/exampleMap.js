@@ -43,13 +43,19 @@ exampleNamespace.exampleMap_draw = function() {
 };
 
 exampleNamespace.exampleMap_update = function() {
-    if(state.newTurn && state.turn >= 4 && state.turn < 4 + mapSize * 2) {
-        effectWarn(new Vec2(state.turn - 4 - mapSize, -mapSize), state.beatSpacing);
-        
-        makeDelay(1, function() {
-            // makeBulletCircle(new Vec2(state.turn - 4 - mapSize, 0));
-            // makeWall(new Vec2(state.turn - 4 - mapSize, -mapSize), "test-alias", 16, 3);
-            makeWall(new Vec2(state.turn - 4 - mapSize, -mapSize), "test-bullet", 16, 3);
-        });
+    if(state.newTurn) {
+        if(state.turn >= 4 && state.turn < 4 + mapSize * 2) {
+            effectWarn(new Vec2(state.turn - 4 - mapSize, -mapSize), state.beatSpacing);
+            
+            makeDelay(1, function() {
+                makeBulletCircle(new Vec2(state.turn - 4 - mapSize, 0));
+            });
+        }
+        if(state.turn >= 24 && state.turn < 48 && state.turn % 8 == 0) {
+            makeCustomEntity(new Vec2(-2, 3), exampleNamespace.exampleEntity, 22, false, true, false);
+        }
+        if(state.turn >= 24 && state.turn < 48 && state.turn % 8 == 0) {
+            makeCustomEntity(new Vec2(-3, 6), exampleNamespace.exampleEntity, 22, false, true, false);
+        }
     }
 };

@@ -44,6 +44,612 @@ const d8mid = [new Vec2(0)]; // placeholder
 
 //#endregion
 
+//#region Sprites
+
+/**
+ * Contains all the default sprites used in the game.
+ * @hideconstructor
+ */
+class Sprites {
+    /**
+     * @default "arrow"
+     * @readonly
+     * @type {string}
+     */
+    static arrow;
+    /**
+     * @default "beach"
+     * @readonly
+     * @type {string}
+     */
+    static beach;
+    /**
+     * @default "big-copper"
+     * @readonly
+     * @type {string}
+     */
+    static bigCopper;
+    /**
+     * @default "circle"
+     * @readonly
+     * @type {string}
+     */
+    static circle;
+    /**
+     * @default "ckat"
+     * @readonly
+     * @type {string}
+     */
+    static ckat;
+    /**
+     * @default "cloud1"
+     * @readonly
+     * @type {string}
+     */
+    static cloud1;
+    /**
+     * @default "cloud2"
+     * @readonly
+     * @type {string}
+     */
+    static cloud2;
+    /**
+     * @default "cloud3"
+     * @readonly
+     * @type {string}
+     */
+    static cloud3;
+    /**
+     * @default "cloud4"
+     * @readonly
+     * @type {string}
+     */
+    static cloud4;
+    /**
+     * @default "empty"
+     * @readonly
+     * @type {string}
+     */
+    static empty;
+    /**
+     * @default "error"
+     * @readonly
+     * @type {string}
+     */
+    static error;
+    /**
+     * @default "explode0"
+     * @readonly
+     * @type {string}
+     */
+    static explode0;
+    /**
+     * @default "explode1"
+     * @readonly
+     * @type {string}
+     */
+    static explode1;
+    /**
+     * @default "explode2"
+     * @readonly
+     * @type {string}
+     */
+    static explode2;
+    /**
+     * @default "explode3"
+     * @readonly
+     * @type {string}
+     */
+    static explode3;
+    /**
+     * @default "explode4"
+     * @readonly
+     * @type {string}
+     */
+    static explode4;
+    /**
+     * @default "hit0"
+     * @readonly
+     * @type {string}
+     */
+    static hit0;
+    /**
+     * @default "hit1"
+     * @readonly
+     * @type {string}
+     */
+    static hit1;
+    /**
+     * @default "hit2"
+     * @readonly
+     * @type {string}
+     */
+    static hit2;
+    /**
+     * @default "hit3"
+     * @readonly
+     * @type {string}
+     */
+    static hit3;
+    /**
+     * @default "hit4"
+     * @readonly
+     * @type {string}
+     */
+    static hit4;
+    /**
+     * @default "hit5"
+     * @readonly
+     * @type {string}
+     */
+    static hit5;
+    /**
+     * @default "laser"
+     * @readonly
+     * @type {string}
+     */
+    static laser;
+    /**
+     * @default "longcloud1"
+     * @readonly
+     * @type {string}
+     */
+    static longcloud1;
+    /**
+     * @default "longcloud2"
+     * @readonly
+     * @type {string}
+     */
+    static longcloud2;
+    /**
+     * @default "longcloud3"
+     * @readonly
+     * @type {string}
+     */
+    static longcloud3;
+    /**
+     * @default "longcloud4"
+     * @readonly
+     * @type {string}
+     */
+    static longcloud4;
+    /**
+     * @default "longcloud5"
+     * @readonly
+     * @type {string}
+     */
+    static longcloud5;
+    /**
+     * @default "petal"
+     * @readonly
+     * @type {string}
+     */
+    static petal;
+    /**
+     * @default "reload"
+     * @readonly
+     * @type {string}
+     */
+    static reload;
+    /**
+     * @default "shadow"
+     * @readonly
+     * @type {string}
+     */
+    static shadow;
+    /**
+     * @default "smoke0"
+     * @readonly
+     * @type {string}
+     */
+    static smoke0;
+    /**
+     * @default "smoke1"
+     * @readonly
+     * @type {string}
+     */
+    static smoke1;
+    /**
+     * @default "smoke2"
+     * @readonly
+     * @type {string}
+     */
+    static smoke2;
+    /**
+     * @default "smoke3"
+     * @readonly
+     * @type {string}
+     */
+    static smoke3;
+    /**
+     * @default "smoke4"
+     * @readonly
+     * @type {string}
+     */
+    static smoke4;
+    /**
+     * @default "smoke5"
+     * @readonly
+     * @type {string}
+     */
+    static smoke5;
+    /**
+     * @default "star1"
+     * @readonly
+     * @type {string}
+     */
+    static star1;
+    /**
+     * @default "star2"
+     * @readonly
+     * @type {string}
+     */
+    static star2;
+    /**
+     * @default "star3"
+     * @readonly
+     * @type {string}
+     */
+    static star3;
+    /**
+     * @default "sun"
+     * @readonly
+     * @type {string}
+     */
+    static sun;
+    /**
+     * @default "tile"
+     * @readonly
+     * @type {string}
+     */
+    static tile;
+    /**
+     * @default "wall"
+     * @readonly
+     * @type {string}
+     */
+    static wall;
+
+    /**
+     * @default "arc"
+     * @readonly
+     * @type {string}
+     */
+    static arc;
+    /**
+     * @default "book"
+     * @readonly
+     * @type {string}
+     */
+    static book;
+    /**
+     * @default "bullet-blue"
+     * @readonly
+     * @type {string}
+     */
+    static bulletBlue;
+    /**
+     * @default "bullet-pink"
+     * @readonly
+     * @type {string}
+     */
+    static bulletPink;
+    /**
+     * @default "bullet-purple"
+     * @readonly
+     * @type {string}
+     */
+    static bulletPurple;
+    /**
+     * @default "bullet-tri"
+     * @readonly
+     * @type {string}
+     */
+    static bulletTri;
+    /**
+     * @default "bullet"
+     * @readonly
+     * @type {string}
+     */
+    static bullet;
+    /**
+     * @default "conveyor"
+     * @readonly
+     * @type {string}
+     */
+    static conveyor;
+    /**
+     * @default "copper"
+     * @readonly
+     * @type {string}
+     */
+    static copper;
+    /**
+     * @default "duo"
+     * @readonly
+     * @type {string}
+     */
+    static duo;
+    /**
+     * @default "fail"
+     * @readonly
+     * @type {string}
+     */
+    static fail;
+    /**
+     * @default "headphones"
+     * @readonly
+     * @type {string}
+     */
+    static headphones;
+    /**
+     * @default "health"
+     * @readonly
+     * @type {string}
+     */
+    static health;
+    /**
+     * @default "info"
+     * @readonly
+     * @type {string}
+     */
+    static info;
+    /**
+     * @default "junction"
+     * @readonly
+     * @type {string}
+     */
+    static junction;
+    /**
+     * @default "lancer"
+     * @readonly
+     * @type {string}
+     */
+    static lancer;
+    /**
+     * @default "lancer2"
+     * @readonly
+     * @type {string}
+     */
+    static lancer2;
+    /**
+     * @default "mine"
+     * @readonly
+     * @type {string}
+     */
+    static mine;
+    /**
+     * @default "overflow-gate"
+     * @readonly
+     * @type {string}
+     */
+    static overflowGate;
+    /**
+     * @default "pause"
+     * @readonly
+     * @type {string}
+     */
+    static pause;
+    /**
+     * @default "play"
+     * @readonly
+     * @type {string}
+     */
+    static play;
+    /**
+     * @default "progress-tick"
+     * @readonly
+     * @type {string}
+     */
+    static progressTick;
+    /**
+     * @default "progress"
+     * @readonly
+     * @type {string}
+     */
+    static progress;
+    /**
+     * @default "router"
+     * @readonly
+     * @type {string}
+     */
+    static router;
+    /**
+     * @default "settings"
+     * @readonly
+     * @type {string}
+     */
+    static settings;
+    /**
+     * @default "shield"
+     * @readonly
+     * @type {string}
+     */
+    static shield;
+    /**
+     * @default "skat"
+     * @readonly
+     * @type {string}
+     */
+    static skat;
+    /**
+     * @default "sorter"
+     * @readonly
+     * @type {string}
+     */
+    static sorter;
+    /**
+     * @default "unit-alpha-happy"
+     * @readonly
+     * @type {string}
+     */
+    static unitAlphaHappy;
+    /**
+     * @default "unit-alpha-hit"
+     * @readonly
+     * @type {string}
+     */
+    static unitAlphaHit;
+    /**
+     * @default "unit-alpha"
+     * @readonly
+     * @type {string}
+     */
+    static unitAlpha;
+    /**
+     * @default "unit-boulder-hit"
+     * @readonly
+     * @type {string}
+     */
+    static unitBoulderHit;
+    /**
+     * @default "unit-boulder"
+     * @readonly
+     * @type {string}
+     */
+    static unitBoulder;
+    /**
+     * @default "unit-crawler-angery"
+     * @readonly
+     * @type {string}
+     */
+    static unitCrawlerAngery;
+    /**
+     * @default "unit-crawler-hit"
+     * @readonly
+     * @type {string}
+     */
+    static unitCrawlerHit;
+    /**
+     * @default "unit-crawler"
+     * @readonly
+     * @type {string}
+     */
+    static unitCrawler;
+    /**
+     * @default "unit-mono-happy"
+     * @readonly
+     * @type {string}
+     */
+    static unitMonoHappy;
+    /**
+     * @default "unit-mono-hit"
+     * @readonly
+     * @type {string}
+     */
+    static unitMonoHit;
+    /**
+     * @default "unit-mono"
+     * @readonly
+     * @type {string}
+     */
+    static unitMono;
+    /**
+     * @default "unit-oct-angery"
+     * @readonly
+     * @type {string}
+     */
+    static unitOctAngery;
+    /**
+     * @default "unit-oct-hit"
+     * @readonly
+     * @type {string}
+     */
+    static unitOctHit;
+    /**
+     * @default "unit-oct"
+     * @readonly
+     * @type {string}
+     */
+    static unitOct;
+    /**
+     * @default "unit-oxynoe-hit"
+     * @readonly
+     * @type {string}
+     */
+    static unitOxynoeHit;
+    /**
+     * @default "unit-oxynoe"
+     * @readonly
+     * @type {string}
+     */
+    static unitOxynoe;
+    /**
+     * @default "unit-quad-hit"
+     * @readonly
+     * @type {string}
+     */
+    static unitQuadHit;
+    /**
+     * @default "unit-quad"
+     * @readonly
+     * @type {string}
+     */
+    static unitQuad;
+    /**
+     * @default "unit-sei-hit"
+     * @readonly
+     * @type {string}
+     */
+    static unitSeiHit;
+    /**
+     * @default "unit-sei"
+     * @readonly
+     * @type {string}
+     */
+    static unitSei;
+    /**
+     * @default "unit-zenith-angery"
+     * @readonly
+     * @type {string}
+     */
+    static unitZenithAngery;
+    /**
+     * @default "unit-zenith-hit"
+     * @readonly
+     * @type {string}
+     */
+    static unitZenithHit;
+    /**
+     * @default "unit-zenith"
+     * @readonly
+     * @type {string}
+     */
+    static unitZenith;
+    /**
+     * @default "warn"
+     * @readonly
+     * @type {string}
+     */
+    static warn;
+    /**
+     * @default "wave0"
+     * @readonly
+     * @type {string}
+     */
+    static wave0;
+    /**
+     * @default "wave1"
+     * @readonly
+     * @type {string}
+     */
+    static wave1;
+    /**
+     * @default "wave2"
+     * @readonly
+     * @type {string}
+     */
+    static wave2;
+    /**
+     * @default "wave3"
+     * @readonly
+     * @type {string}
+     */
+    static wave3;
+}
+
+//#endregion
+
 //#region Classes
 
 /**
@@ -99,6 +705,7 @@ class Color {
      * @param {number} a The alpha component.
      */
     constructor(r, g, b, a) { }
+
     /**
      * Mixes two colors together according to its mode.
      * - mix: Interpolate between the colors.
@@ -246,6 +853,73 @@ class Color {
     static yellow;
 }
 
+/**
+ * A custom entity.
+ */
+class CustomEntity {
+    /**
+     * The grid position of the entity.
+     * @type {Vec2}
+     * @default new Vec2(0)
+     */
+    pos;
+    /**
+     * The sprite of the entity.
+     * @type {string}
+     * @default ""
+     */
+    sprite;
+    /**
+     * The rotation of the entity in degrees.
+     * @type {number}
+     * @default 0
+     */
+    rot;
+    /**
+     * The scale of the entity.
+     * @type {number}
+     * @default 1
+     */
+    scl;
+    /**
+     * The real position of the entity.
+     * @type {Vec2}
+     * @readonly
+     */
+    smoothPos;
+    /**
+     * Whether the object is being deleted.
+     * @type {bool}
+     * @readonly
+     */
+    deleting;
+    /**
+     * Whether the object is being deleted immediately.
+     * @readonly
+     */
+    deletingImmediate;
+    /**
+     * The script of the entity. It is probably possible, but not recommended, to change this value.
+     * @type {function():void}
+     */
+    script;
+
+    /**
+     * Deletes the entity with an animation.
+     * The entity's script will still run until the end of the animation.
+     * Calling this multiple times has no effect.
+     */
+    destroy() { }
+
+    /**
+     * Deletes the entity immediately without an animation.
+     * The entity's script will not run after this function is called.
+     * Calling this multiple times has no effect.
+     * The entity will be removed from the game in the next frame.
+     */
+    destroyImmediate() { }
+}
+
 //#endregion
 
 //#region Objects
@@ -291,7 +965,7 @@ var state = {
      */
     time,
     /**
-     * The global time that is independent of the current beatmap. Very useful for animating values. Does not freeze in menus or when the game is paused (TODO actually test this).
+     * The global time that is independent of the current beatmap. Very useful for animating values. Does not freeze in menus or when the game is paused.
      * @type {number}
      * @readonly
      */
@@ -374,6 +1048,12 @@ var state = {
      * @readonly
      */
     beatSpacing,
+    /**
+     * The current interpolated beat.
+     * @type {number}
+     * @readonly
+     */
+    smoothTurn
 }
 
 //#endregion
@@ -726,21 +1406,22 @@ function drawZoom(col = Color.white, offset = 0, amount = 10, sides = 4) { }
 
 /**
  * The screen becomes light blue from the top left corner. This effect is used to transition between the menu and levels.
- * @param {number} time The screen will move if you put in a value that changes over time.
+ * @param {number} time The effect will move if you put in a value that changes over time.
  */
 function drawFadeOut(time) { }
 
 /**
  * A light blue screen disappears into the bottom right corner. This effect is used to transition between the menu and levels.
- * @param {number} time The circles will move if you put in a value that changes over time. The value should change in reverse (?).
+ * @param {number} time The effect will move if you put in a value that changes over time. The value should change in reverse (?).
  */
 function drawFadeIn(time) { }
 
 /**
  * Draws many stripes pointing towards the center. Only works inside levels.
  * @param {Color} col The color of the stripes.
+ * @param {number} [time=state.secs] The stripes will move if you put in a value that changes over time.
  */
-function drawSpace(col) { }
+function drawSpace(col, time) { }
 
 /**
  * Draws the current unit's splash image. Should only be used in unit splash drawing.
@@ -1137,6 +1818,18 @@ function makeBulletCircle(pos, tex = "") { }
  * @param {Vec2} dir The direction the turret is pointing in. Only cardinal directions with a magnitude of one work (no diagonal lasers).
  */
 function makeLaser(pos, dir) { }
+
+/**
+ * Creates a custom entity on the playing field. Should only be used in map update scripts.
+ * @param {Vec2} pos The position of the entity.
+ * @param {function():void} script The function to run each frame. `this` can be used in the function to access the entity (type is `CustomEntity`).
+ * @param {int} [lifetime=-1] The number of turns the entity will exist. -1 for infinite.
+ * @param {bool} [destructible=false] Whether the entity can be destroyed by the player.
+ * @param {bool} [damagePlayer=false] Whether the entity damages the player on contact.
+ * @param {bool} [deleteOnContact=false] Whether the entity is destroyed on contact with the player. Only works if `damagePlayer` is `true`.
+ * @returns {CustomEntity} The created entity.
+ */
+function makeCustomEntity(pos, script, lifetime = -1, destructible = false, damagePlayer = false, deleteOnContact = false) { }
 
 //#endregion
 
